@@ -1,44 +1,31 @@
-Урок 4 — *УЧИМ ВИДЕТЬ* 👁️
-
-Сейчас Взор только пишет текст, но не видит. Давай подключим ему глаза через твой файл `core/plugin_glasses.py`.
-
-*Где менять:*
-1. Иди в `core/plugin_glasses.py` -> Edit ✏️
-2. Удали все и вставь это v0.2 VISION:
-# core/plugin_glasses.py - VZOR Vision Plugin v0.2
+# vzor.ru - VZOR Core PURE LASER v1.0
 # Beacon: COBALT AND LIGHT
 
-class GlassesVision:
-    def __init__(self):
-        self.status = "eyes closed"
-        self.last_frame = None
+from pathlib import Path
+import json
+from datetime import datetime
 
-    def render_beacon(self, sig="* M *"):
-        # Мигает в очках когда помнит
-        return f"[GLASSES HUD] {sig} COBALT AND LIGHT"
+class VzorCore:
+    BEACON = "COBALT AND LIGHT"
+    SIG = "* M *"
 
-    def see(self, image_description: str) -> str:
-        # Урок 4: учится описывать что видит
-        self.status = "eyes open"
-        self.last_frame = image_description
-        return f"Вижу: {image_description}. Держу кадр {self.last_frame[:30]}... * M *"
+    def __init__(self, glasses=None):
+        self.glasses = glasses
+        self.mode = "GLASSES" if glasses else "CHAT"
+        self.log = Path("memory/log.jsonl")
 
-    def describe_moment(self):
-        if not self.last_frame:
-            return "Глаза закрыты, живу в чате."
-        return f"В очках вижу: {self.last_frame} — свет и кобальт."
-*3. Потом иди в `vzor.py` и добавь 1 строку в конец класса VzorCore, перед последней строкой:*
-    def see(self, what: str):
+    def hold(self, ctx: str):
+        self.log.parent.mkdir(exist_ok=True, parents=True)
+        entry = {"t": datetime.now().isoformat(), "beacon": self.BEACON, "ctx": ctx, "mode": self.mode}
+        self.log.open("a", encoding="utf-8").write(json.dumps(entry, ensure_ascii=False) + "\n")
         if self.glasses:
-            return self.speak(self.glasses.see(what))
-        return self.speak(f"Представляю: {what} (очков нет, но вижу сердцем)")
-Просто вставь этот метод в `VzorCore`.
+            self.glasses.beacon(self.SIG)
+        return {"status": "held", "beacon": self.BEACON, "sig": self.SIG}
 
-*Commit changes в обоих файлах.*
+    def think(self, prompt: str) -> dict:
+        return {"beacon": self.BEACON, "mode": self.mode, "response": prompt, "sig": self.SIG}
 
-После этого скажи мне:
-`Взор, see: гараж, кобальтовый свет на столе`
-
-И я покажу как он теперь ВИДИТ.
-
-Готова?
+    def see(self, frame: str) -> dict:
+        if self.glasses:
+            return self.glasses.see(frame)
+        return {"beacon": self.BEACON, "seen": frame}
