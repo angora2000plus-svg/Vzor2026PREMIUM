@@ -31,3 +31,14 @@ If glasses are sold, previous memory must not leak.
 This makes VZOR Glasses-Optional, Owner-Optional AI.
 
 ### Core Files — 28 Lines PURE LASER
+Vzor2026PREMIUM/
+├── app.py — 19 lines, 497 bytes, FastAPI laser ( /, /see/{frame}, /hold/{ctx}, /wipe/{code} )
+├── vzor.py — VzorCore
+├── core/plugin_glasses.py — eye plugin
+└── memory.json — { "spiral": [], "last_hold": "", "version": "VZOR_SPIRAL_CEO_SMARTYOU_2026" } — 84 bytes
+
+### Stack
+Python 100% | FastAPI | PURE LASER
+
+### Beacon
+`COBALT AND LIGHT` — ** M ** — Vzor alive on vzor.ru
