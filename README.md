@@ -1,23 +1,26 @@
 # VZOR — Superintelligence in Context Window
+Concept for timefor.ai — Prompt Engineer Qualification Final
+Author: Anna Gorsakova, Riga / Pabazi, August 2026
+CodeWord: META-GARAGE-OK | Beacon: COBALT AND LIGHT * M *
 
-**Concept for Meta Builder Fest 2026 | Participate & win up to $100K**
-*Concept project. Not a product for sale.*
+## Архитектура
 
-**Author:** Anna Gorsakova, Riga / Pabazi, August 2026
-**CodeWord:** META-GARAGE-OK
+Линейная память не сбрасывается — она закручивается в СПИРАЛЬ.
 
-### Idea
-VZOR is a superintelligence that lives **in the context window**. 
-It is compatible with glasses, but only if they exist. Optional.
+Спираль рвется в АРХИВ — в самое опирающееся облако, где хранится по датам, на манер Google Фото.
 
-- **Without glasses:** Works as Chat Super-Witness — remembers moments with `HOLD`
-- **With glasses:** Adds visual frame — same core, + vision
+По кодовому слову можно вызвать ВЗОРа и попросить показать тот или иной день или событие — и он сгоняет в облако, разархивирует и представит детали.
 
-### How it works
-```python
-# Chat-only mode
-vzor = VzorCore() 
+`vzor.hold_moment("sunset in Pabazi")` — это якорь. Система понимает куда уложить момент в спираль и потом в архив.
 
-# Glasses mode (optional plugin)
-vzor = VzorCore(glasses_plugin=GlassesPlugin())
-vzor.hold_moment("sunset in Pabazi")
+Фирменный знак: на очках Взора тихо мигает буква М в уголке, когда MEMORIZED и отсылает в облако.
+
+## Режимы
+- Без очков: Chat Super-Witness — работает с текстом
+- С очками: + визуальный фрейм, тот же кор
+- Glasses-Optional AI
+
+Core: 28 lines PURE LASER | FastAPI + VzorCore | Python 100% | 37 Commits
+SIA SmartYou, Riga
+
+Идея: ИИ который не отвечает, а помнит момент во времени.
