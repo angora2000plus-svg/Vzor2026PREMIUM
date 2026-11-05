@@ -1,28 +1,43 @@
-# vzor.ru / vzor.py - PURE LASER v1.0
-# COBALT AND LIGHT
+import json, datetime, os
 
-from pathlib import Path
-import json
-from datetime import datetime
+MEMORY = "memory.json"
+CODE_HOLD = "META-GARAGE-OK"
+CODE_WIPE = "VZOR-WIPE-M-2026"
 
-class VzorCore:
-    BEACON = "COBALT AND LIGHT"
-    SIG = "* M *"
+def _load():
+    if not os.path.exists(MEMORY):
+        return {"spiral": [], "last_hold": "", "version": "VZOR_SPIRAL_CEO_SMARTYOU_2026"}
+    with open(MEMORY, "r") as f:
+        return json.load(f)
 
-    def __init__(self, glasses=None):
-        self.glasses = glasses
-        self.mode = "GLASSES" if glasses else "CHAT"
-        self.log = Path("memory/log.jsonl")
+def _save(data):
+    with open(MEMORY, "w") as f:
+        json.dump(data, f, indent=2)
+    print("M blink -> MEMORIZED -> cloud")
 
-    def hold(self, ctx: str):
-        self.log.parent.mkdir(parents=True, exist_ok=True)
-        row = {"t": datetime.now().isoformat(), "beacon": self.BEACON, "ctx": ctx, "mode": self.mode}
-        with self.log.open("a", encoding="utf-8") as f:
-            f.write(json.dumps(row, ensure_ascii=False) + "\n")
-        return {"held": True, "sig": self.SIG}
+def hold_moment(event: str, code: str):
+    if code != CODE_HOLD:
+        return "Wrong CodeWord"
+    data = _load()
+    anchor = {
+        "date": datetime.date.today().isoformat(),
+        "event": event,
+        "timestamp": datetime.datetime.now().isoformat()
+    }
+    data["spiral"].append(anchor)
+    data["last_hold"] = event
+    _save(data)
+    return f"Spiral +1: {event}"
 
-    def think(self, prompt: str):
-        return {"beacon": self.BEACON, "mode": self.mode, "response": prompt, "sig": self.SIG}
+def show_day(date_str: str, code: str):
+    if code != CODE_HOLD:
+        return "Wrong CodeWord"
+    data = _load()
+    return [m for m in data["spiral"] if m["date"] == date_str]
 
-    def see(self, frame: str):
-        return {"seen": frame, "beacon": self.BEACON}
+def factory_wipe(code: str):
+    if code != CODE_WIPE:
+        return "Wrong Wipe Code"
+    clean = {"spiral": [], "last_hold": "", "version": "VZOR_SPIRAL_CEO_SMARTYOU_2026"}
+    _save(clean)
+    return "M blink RED x3 -> WIPE DONE"
