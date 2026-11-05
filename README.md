@@ -1,26 +1,16 @@
-# VZOR — Superintelligence in Context Window
-Concept for timefor.ai — Prompt Engineer Qualification Final
-Author: Anna Gorsakova, Riga / Pabazi, August 2026
-CodeWord: META-GARAGE-OK | Beacon: COBALT AND LIGHT * M *
+# VZOR — Linear Memory to Spiral Archive
 
-## Архитектура
+Architecture:
+Linear memory does not reset. It flows into a SPIRAL.
 
-Линейная память не сбрасывается — она закручивается в СПИРАЛЬ.
+Spiral tears into ARCHIVE — the most grounded cloud, 
+stored by dates like Google Photos.
 
-Спираль рвется в АРХИВ — в самое опирающееся облако, где хранится по датам, на манер Google Фото.
+By CodeWord META-GARAGE-OK you can call VZOR:
+"Show that day" — and it goes to cloud, unarchives, presents details.
 
-По кодовому слову можно вызвать ВЗОРа и попросить показать тот или иной день или событие — и он сгоняет в облако, разархивирует и представит детали.
+hold_moment("event") = anchor for spiral -> archive.
 
-`vzor.hold_moment("sunset in Pabazi")` — это якорь. Система понимает куда уложить момент в спираль и потом в архив.
+Trademark: Letter M quietly blinks in the corner of VZOR glasses when MEMORIZED and sent to cloud.
 
-Фирменный знак: на очках Взора тихо мигает буква М в уголке, когда MEMORIZED и отсылает в облако.
-
-## Режимы
-- Без очков: Chat Super-Witness — работает с текстом
-- С очками: + визуальный фрейм, тот же кор
-- Glasses-Optional AI
-
-Core: 28 lines PURE LASER | FastAPI + VzorCore | Python 100% | 37 Commits
-SIA SmartYou, Riga
-
-Идея: ИИ который не отвечает, а помнит момент во времени.
+Glasses-Optional AI. 28 lines PURE LASER.
