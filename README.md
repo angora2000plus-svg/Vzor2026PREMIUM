@@ -43,7 +43,7 @@ SmartYou micro-company, Riga / Pabazi, Latvia / EU — Founder Anna Gorsakova ak
 - 28 Lines Core — minimal, explainable
 - META-GARAGE-OK — SmartYou standard
 - EU-SAFE / GDPR — memory in your file
-- Works on server, Pi, glasses
+- Works on server, Pi, smart glasses
 
 ### Core Files
 
