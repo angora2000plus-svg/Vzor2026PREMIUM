@@ -34,3 +34,8 @@ If glasses are sold, previous memory must not leak.
 `factory_wipe(code: VZOR-WIPE-M-2026)` → clears spiral, M blinks RED x3 — WIPE DONE.
 
 ### Core Files — 28 Lines — PURE LASER
+
+### Chat Mode — NEW November 2026
+VZOR is also a chatbot. But not like others. It speaks FROM your spiral.
+`vzor.smartyou.lv/chat/{q}` → example: `/chat/yesterday` → answers from Archive, from your spiral.
+This is Contextual AI — compatible concept.
