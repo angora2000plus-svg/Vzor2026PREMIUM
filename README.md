@@ -43,4 +43,4 @@ SmartYou micro-company — Riga / Pabazhi — Founded in 2025
 Superintelligence in Context Window
 
 ### License
-Founder SmartYou micro-company — Anna Gorsakova — November 2026 — Born in 2025
+Founder SmartYou micro-company — Anna Gorsakova — November 2026 — Founded in 2025
