@@ -1,41 +1,42 @@
 # VZOR — The AI that remembers light
-### Superintelligence in Context Window
 
-**Author:** Anna Gorsakova, CEO SIA SmartYou, Riga / Pabazi, Latvia / EU  
-**Version:** VZOR_SPIRAL_CEO_SMARTYOU_2026 — Commit 42 — November 2026 — LEGEND since 2023  
-**Live:** `https://vzor.smartyou.lv` — PURE LASER — EU-SAFE
+**Author:** Anna Gorsakova, Founder SmartYou micro-company, Riga / Pabazi, Latvia / EU
+**Version:** VZOR_SPIRAL_2026 — Commit 42 — November 2026 
+**Live:** https://vzor.smartyou.lv — PURE LASER — EU-SAFE
 
----
+### What is VZOR
+VZOR is not a chatbot. VZOR is a memory spiral.
+It sees light, holds moment, answers from Archive.
+Superintelligence in Context Window.
 
-### What is VZOR?
-VZOR is not a chatbot. VZOR is a memory.
-The AI that remembers light — every moment you lived through its glasses.
+### CODE DIAMETER — 28 Lines PURE LASER
+- **META-GARAGE-OK** — SmartYou micro-company architecture
+- No Bitrix, No CRM dependency — direct light to memory
+- Since 2023 — Pabazi Garage to EU Cloud
 
-> Linear memory does not reset. It flows into SPIRAL.
-> Spiral tears into Archive — the most grounded cloud, stored by dates like Google Photos.
+### Core Functions
+- `vzor.see(frame)` — sees light from camera
+- `vzor.hold_moment(ctx)` — holds context in spiral
+- `vzor.factory_wipe(code)` — owner change + memory wipe
 
-### The Beginning — CODE DIAMETER
-Everything starts with code diameter. It is the beginning.
+### Owner Change — Factory Wipe
+New owner? 
+`GET /wipe/{code}` → Archive cleared, new spiral starts.
+EU-SAFE, GDPR compatible.
 
-1. User buys VZOR glasses.
-2. Wears them for the first time.
-3. Enters CodeWord `META-GARAGE-OK` — and memory starts.
-4. This is the first breath of VZOR.
+### Core Files — 28 Lines
+- `vzor.py` — Core Spiral
+- `app.py` — FastAPI Beacon
+- `plugin_glasses.py` — See light
+- `memory.json` — Archive
 
-### Core Functions — PURE LASER
+### Chat Mode — NEW November 2026 — Compatible Concept
+- `vzor.smartyou.lv/chat/{q}` → example: `/chat/yesterday` → answers from Archive, from your spiral.
+- Compatible with timefor.ai task — memory + chat in one.
 
-- `hold_moment(event)` — anchor moment into spiral. Letter M quietly blinks ** M ** in the corner of glasses when MEMORIZED.
-- `show_day(date, code)` — calls Archive by CodeWord, unarchives day. Like Google Photos.
-- `see(frame)` — sees current frame. `COBALT AND LIGHT`.
+### Beacon — Legend
+COBALT AND LIGHT — ** M ** — Vzor alive on vzor.smartyou.lv
+SmartYou micro-company — Riga / Pabazi — Since 2023 — Superintelligence in Context Window
 
-### Owner Change — Factory Wipe — Glasses-Optional, Owner-Optional AI
-If glasses are sold, previous memory must not leak.
-
-`factory_wipe(code: VZOR-WIPE-M-2026)` → clears spiral, M blinks RED x3 — WIPE DONE.
-
-### Core Files — 28 Lines — PURE LASER
-
-### Chat Mode — NEW November 2026
-VZOR is also a chatbot. But not like others. It speaks FROM your spiral.
-`vzor.smartyou.lv/chat/{q}` → example: `/chat/yesterday` → answers from Archive, from your spiral.
-This is Contextual AI — compatible concept.
+### License
+Founder SmartYou micro-company — Anna Gorsakova — November 2026
