@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>VZOR — The AI that a Memory, compressed in light | Superintelligence, your personal multitasking assistant </title>
+<title>VZOR — The AI that a Memory, compressed in light | Superintelligence, your personal multitasking assistant in Context Window & Smart Glasses /optional/</title>
 </head>
 <body>
 <h1>VZOR — The AI that remembers light</h1>
